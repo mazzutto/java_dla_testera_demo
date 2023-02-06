@@ -11,6 +11,9 @@ public class MainApp {
         System.out.println(homePC.state);
         System.out.println(laptopPC.state);
 
+        homePC.setBatteryLevel();
+        homePC.switchOn();
+
     }
 
 

@@ -19,5 +19,9 @@ public class PC extends Computer {
             System.out.println("No power suply");
         }
     }
+
+    public void setBatteryLevel() {
+        powerSuply = true;
+    }
 }
 
