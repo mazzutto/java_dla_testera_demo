@@ -1,11 +1,12 @@
 package model.computer;
 
-public class Computer {
+abstract public class Computer {
     protected String name;
     protected String type;
     protected int ram;
     protected int hdd;
     protected boolean state;
+    protected int volume;
 
 
     public Computer(String name, String type, int ram, int hdd) {
@@ -14,6 +15,7 @@ public class Computer {
         this.ram = ram;
         this.hdd = hdd;
         this.state = false;
+        this.volume = 0;
     }
 
     public String getName() {
@@ -58,5 +60,22 @@ public class Computer {
 
     public boolean getState() {
         return state;
+    }
+    public abstract int volumeUp();
+    public abstract int volumeDown();
+    public int volumeUp(int i) {
+
+        if (volume +i > 100) {
+            return volume = 100;
+        } else {
+            return volume+i;
+        }
+    }
+    public int volumeDown(int i) {
+        if (volume - i < 0) {
+            return volume = 0;
+        } else {
+            return volume - i;
+        }
     }
 }

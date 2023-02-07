@@ -20,8 +20,15 @@ public class PC extends Computer {
         }
     }
 
-    public void setBatteryLevel() {
+    public void setPowerSuply() {
         powerSuply = true;
     }
+    public int volumeUp() {
+    return volume+=5;
+    }
+    public int volumeDown() {
+        return volume -= 10;
+    }
+
 }
 
