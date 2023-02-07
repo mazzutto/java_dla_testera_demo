@@ -3,13 +3,13 @@ package model.computer;
 abstract public class Computer {
     protected String name;
     protected String type;
-    protected int ram;
-    protected int hdd;
+    protected Ram ram;
+    protected Hdd hdd;
     protected boolean state;
     protected int volume;
 
 
-    public Computer(String name, String type, int ram, int hdd) {
+    public Computer(String name, String type, Ram ram, Hdd hdd) {
         this.name = name;
         this.type = type;
         this.ram = ram;
@@ -34,19 +34,19 @@ abstract public class Computer {
         this.type = type;
     }
 
-    public int getRam() {
+    public Ram getRam() {
         return ram;
     }
 
-    public void setRam(int ram) {
+    public void setRam(Ram ram) {
         this.ram = ram;
     }
 
-    public int getHdd() {
+    public Hdd getHdd() {
         return hdd;
     }
 
-    public void setHdd(int hdd) {
+    public void setHdd(Hdd hdd) {
         this.hdd = hdd;
     }
 
@@ -77,5 +77,17 @@ abstract public class Computer {
         } else {
             return volume - i;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Computer{" +
+                "name='" + name + '\'' +
+                ", type='" + type + '\'' +
+                ", ram=" + ram +
+                ", hdd=" + hdd +
+                ", state=" + state +
+                ", volume=" + volume +
+                '}';
     }
 }

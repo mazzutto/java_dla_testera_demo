@@ -1,10 +1,10 @@
 package model.computer;
 
-public class Laptop extends Computer {
+public class Laptop extends Computer implements Music, Video {
 
     private int batteryLevel;
 
-    public Laptop(String name, String type, int ram, int hdd, int batteryLevel) {
+    public Laptop(String name, String type, Ram ram, Hdd hdd, int batteryLevel) {
         super(name, type, ram, hdd);
         this.batteryLevel = batteryLevel;
     }
@@ -29,6 +29,39 @@ public class Laptop extends Computer {
         return volume -= 15;
     }
 
+
+    @Override
+    public void playMusic() {
+        System.out.println("Playing music");
+    }
+
+    @Override
+    public void stopMusic() {
+        System.out.println("Stopping music");
+    }
+
+    @Override
+    public void pauseMusic() {
+        System.out.println("Pausing music");
+    }
+
+    @Override
+    public void playVideo() {
+        System.out.println("Pausing video");
+    }
+
+    @Override
+    public void stopVideo() {
+        System.out.println("Pausing video");
+    }
+
+    @Override
+    public void pauseVideo() {
+        System.out.println("Pausing video");
+    }
+    public void sayHello() {
+        Music.super.sayHello();
+    }
 
 
 }

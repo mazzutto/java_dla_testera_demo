@@ -3,7 +3,7 @@ package model.computer;
 public class PC extends Computer {
 
     private boolean powerSuply;
-    public PC(String name, String type, int ram, int hdd, boolean powerSuply) {
+    public PC(String name, String type, Ram ram, Hdd hdd, boolean powerSuply) {
         super(name, type, ram, hdd);
         this.powerSuply = powerSuply;
     }
@@ -29,6 +29,7 @@ public class PC extends Computer {
     public int volumeDown() {
         return volume -= 10;
     }
+
 
 }
 
